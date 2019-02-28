@@ -19,7 +19,7 @@ locals {
 }
 
 module "icpprovision" {
-  source = "github.com/ibm-cloud-architecture/terraform-module-icp-deploy?ref=3.0.2"
+  source = "github.com/cdoan1/terraform-module-icp-deploy?ref=302a"
 
   bastion_host = "${azurerm_public_ip.bootnode_pip.ip_address}"
 
@@ -37,6 +37,7 @@ module "icpprovision" {
   }
 
   icp-inception = "${local.inception_image}"
+  image_location = "${var.image_location}"
 
   # Workaround for terraform issue #10857
   # When this is fixed, we can work this out autmatically

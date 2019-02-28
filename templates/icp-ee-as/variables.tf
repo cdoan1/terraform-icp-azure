@@ -1,4 +1,4 @@
-
+variable "subscription_id" { default = "" }
 
 # See https://azure.microsoft.com/en-us/global-infrastructure/regions/ for details of locatiopn
 variable "location" {

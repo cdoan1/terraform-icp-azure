@@ -3,7 +3,10 @@
 ##################################
 # Details about authentication options here: https://www.terraform.io/docs/providers/azurerm
 
-provider "azurerm" { }
+provider "azurerm" {
+  subscription_id       = "${var.subscription_id}"
+}
+
 
 
 
